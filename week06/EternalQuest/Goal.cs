@@ -4,10 +4,10 @@ public abstract class Goal
     private string _description;
     private int _points;
 
-    public Goal(string name, string description, int points)
+    public Goal(string name, string desc, int points)
     {
         _name = name;
-        _description = description;
+        _description = desc;
         _points = points;
     }
 
@@ -15,7 +15,7 @@ public abstract class Goal
     public string GetDescription() => _description;
     public int GetPoints() => _points;
 
-    public abstract int RecordEvent(); // returns points earned
+    public abstract int RecordEvent();
     public abstract bool IsComplete();
     public abstract string GetStatus();
     public abstract string GetSaveString();

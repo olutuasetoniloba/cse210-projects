@@ -15,14 +15,14 @@ public class ChecklistGoal : Goal
     public override int RecordEvent()
     {
         _current++;
-        int total = GetPoints();
+        int points = GetPoints();
 
         if (_current == _target)
         {
-            total += _bonus;
+            points += _bonus;
         }
 
-        return total;
+        return points;
     }
 
     public override bool IsComplete() => _current >= _target;
